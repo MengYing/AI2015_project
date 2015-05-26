@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div id="chat_area" style="width: 500px; height:500px; border:solid 1px black;">	
+	<div class="msg" chat_id="1" position="left" style="height: auto; background-color: rgb(223, 87, 87);">
+		<span class="msg_content" style="max_width: 60%;">12345</span>
+		<div class="msg_color_set" style="display:none">lalala</div>
+	</div>
+	<div class="msg" chat_id="2" position="right" style="height: auto; background-color: rgb(11, 178, 114)">
+		<span class="msg_content" style="max_width: 60%">67890</span>
+		<div class="msg_color_set" style="display:none">lalala</div>
+	</div>
+	<div class="msg" chat_id="3" position="left" style="height: auto; background-color: rgb(223, 228, 58)">
+		<span class="msg_content" style="max_width: 60%">asdfg</span>
+		<div class="msg_color_set" style="display:none">lalala</div>
+	</div>
+	<!--
+	<div class="msg" chat_id={{chat_id}} position={{direction}} style="height: auto; background-color: red; color: {{color}}">
+		<span style="max_width: 60%">asdfg</span>
+	</div>
+	-->
+</div>
+<div id="input_msg">	// left bottom
+	<button id="submit"></button>
+</div>
+<div id="friend_list">	// right side
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='message.js') }}"></script>
+<script> 
+	$(document).ready(function() {
+    	msg_controller.init();
+	});
+</script>
+{% endblock %}

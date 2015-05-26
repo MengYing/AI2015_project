@@ -1,0 +1,87 @@
+#lower{
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+#reason{
+	margin: 0px; 
+	width: 300px; 
+	height: 50px;
+}
+
+#submit{
+	width: 50%;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+#innersubmit{
+	background-color: #00CC33;
+}
+/* the label on the left */
+
+.sword{
+	clear: both; 
+	height:40px; 
+	position:relative; 
+	font-size: 150%
+}
+
+@media (min-width: 980px) {
+	.choicecontainer{
+		width: 25%; 
+		height: 100px; 
+		float: left;
+	}
+}
+
+@media (max-width: 979px) {
+	.choicecontainer{
+		width: 50%; 
+		height: 100px; 
+		float: left;
+	}
+}
+
+.innerchoice{
+	width: 98.75%;
+	margin-bottom: 2px;
+	height: 80px;
+	background-color: #FFFF00;
+	border-radius: 10px;
+}
+
+#form1{
+	width: 80%;
+	padding-top: 20px;
+}
+
+.middle{
+	width: 95%;
+	height: 95%;
+	margin: 2.5%;
+	border-radius: 10px;
+	cursor: pointer; 
+}
+
+#open{
+	width: 80%;
+	height: auto;
+	display: none;
+}
+
+.long{
+	width: 98.75%;
+	height: 97.5%;
+	margin-left: 0.625%;
+	margin-top: 1.25%;
+	border-radius: 10px;
+	cursor: pointer; 
+}
+
+.floater{
+	float:left; 
+	width: 100%;
+	height:50%; 
+	margin-bottom:-10px
+}

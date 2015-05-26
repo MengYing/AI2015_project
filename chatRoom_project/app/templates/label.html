@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}ChatRoom_System{% endblock %}
+
+{% block logInOut_content %}
+
+{% endblock %}
+{% block userName %}
+{% if userName %}{{ userName }}{% else %}{% endif %}
+{% endblock %}
+
+{% block page_content %}
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='label.css') }}">
+	<div class="page-header" align="center">
+		<div id="picturearea" align="center">
+    			<div id="picframe" align="center" style="width: 80%">
+				<img id="pic" style="width: 80%; height: 80%">
+			</div>
+    			<h5 id="time" align="center"></h5><br>
+			<div id="lower">
+				<h2 id="question" align="center"></h2>
+                		<input type="text" id="reason"></input>
+				<!--
+				<div class="choice long" value="Others" onclick="light(this)">
+					<div class="floater"></div>
+					<div id="word1" class="sword">Others</div>
+				</div>
+				-->
+			</div>
+			
+			<div id="open">
+				<div id="lastinner" class="innerchoice">
+					<!--
+					<div id="form1" class="input-group input-group-lg">
+						<input id="labelinput" type="text" class="form-control" placeholder="What's going on here...">
+				    </div>
+				    -->
+			   </div>
+			</div>
+			
+			<div id="submit">
+				<button id="next" class="btn btn-primary btn-lg" value="Others" onclick="record()">
+					Next
+				</button>
+			</div>
+			<button id="test_Ajax" class="btn btn-primary btn-lg" 
+			onclick='$.post("/testajax", function(response){
+        				alert(response.str);
+    				});'>
+				Test Ajax
+			</button>	
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='label.js') }}"></script>
+	<script> setpic("{{ pic }}",{{ idx }},{{ ttl }}, "{{ question }}");	</script>
+
+{% endblock %}
