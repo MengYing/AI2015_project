@@ -1,16 +1,20 @@
 
+#chat_header{
+	margin-top: -20px;
+}
+
 /* the left part (mainpart) */
 
 #mainpart {
-	width: 75%;
-	height: 100vh;
+	width: 85%;
+	height: 92vh;
 	float: left;
 }
 
 #chat_area {
 	height: 90%;
 	overflow-y: auto;
-	background-color: #FFFF99;
+	background-color: #FFFFFF;
 }
 
 .msg_container {
@@ -27,23 +31,37 @@
 	margin-right: 5px;
 }
 
-.msg_text {
-	max-width: 70%;
+.friend_text{
+    max-width: 70%;
 	display: inline-block;
 	height: auto;
-	background-color: #FFFFFF;
+	background-color: rgba(235, 245, 255, 0.16);
 	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 10px;
 	cursor: pointer;
-	font-size: 200%;
+	font-size: 180%;
+	font-family: Comic Sans MS,arial,helvetica,sans-serif, Microsoft JhengHei;
+
+}
+.msg_text {
+	max-width: 70%;
+	display: inline-block;
+	height: auto;
+	background-color: rgba(225, 226, 239, 0.37);
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 180%;
 	font-family: Comic Sans MS,arial,helvetica,sans-serif, Microsoft JhengHei;
 }
 
 .msg_title {
 	width: 60%;
-	background: #3300CC;
-	font-size: 350%;
+	height: 40px;
+	background: #c9c9c9;
+	font-size: 20px;
 	color: #FFFFFF;
 	margin: 20px;
 	margin-left: 30px;
@@ -68,11 +86,12 @@
 /* the right part (friend_list) */
 
 #friend_list {
-	width: 25%;
-	height: 100vh;
+	
+	width: 15%;
+	height: 92vh;
 	float: right;
 	overflow-y: auto;
-	background-color: #00FFCC;
+	background-color: rgba(235, 245, 255, 0.16);
 }
 
 .friend_container {
@@ -80,7 +99,7 @@
 	height: 100px;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	border-radius: 30px;
+	border-radius: 10px;
 	cursor: pointer;
 }
 

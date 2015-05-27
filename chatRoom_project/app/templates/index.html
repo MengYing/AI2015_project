@@ -7,191 +7,164 @@
 
 {% endblock %}
 
-{% block page_content %}
+{% block content_2 %}
 <link rel="stylesheet" href="{{ url_for('static', filename='chatroom.css') }}">
-<div class="page-header" align="center">
+<div id="chat_header" align="center">
     <div id="mainpart">
 	<div id="chat_area" align="center">
 		<div class="msg_container" align="center">
 			<span class="msg_text msg_title" chat_id="-1" position="center" align="center">
-				孟穎 & 彤彤
+				已連線，請開始聊天...
 			</span>
 		</div>
 		<div class="msg_container" align="left">
 			<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
 			<span class="msg_text" chat_id="23456" position="left" align="left">
-				Hi 孟穎哥~
+				Hi 你好~
 			</span>
 		</div>
 		<div class="msg_container" align="right">
 			<span class="msg_text" chat_id="23457" position="right" align="left">
-				怎麼啦~ 想我啊?
+				你好~
 			</span>
 		</div>
+		
 		<div class="msg_container" align="left">
 			<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
-			<span class="msg_text" chat_id="23458" position="left" align="left">
-				對呀哈哈 想問你星期六晚上有沒有空?
+			<span class="msg_text" chat_id="23460" position="left" align="left" style="background-color: #A8FF55">
+				很高興認識你
 			</span>
 		</div>
-		<div class="msg_container" align="right">
-			<span class="msg_text" chat_id="23459" position="right" align="left">
-				要幹嘛我很忙~ 那天有三個妹約我= =
-			</span>
-		</div>
-		<div class="msg_container" align="left">
-			<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
-			<span class="msg_text" chat_id="23460" position="left" align="left" style="background-color: #FF66FF">
-				是喔真夯XD 那你約到幾點啊 我可以當第四個嗎@@
-			</span>
-		</div>
-		<div class="msg_container" align="right">
-			<span class="msg_text" chat_id="23461" position="right" align="left">
-				回到家也許兩點吧我不確定
-			</span>
-		</div>
-		<div class="msg_container" align="left">
-			<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
-			<span class="msg_text" chat_id="23462" position="left" align="left">
-				我想找人陪我一起看格雷 那我可以那天晚上兩點到你家樓下等你嗎 掰偷掰偷@@
-			</span>
-		</div>
-		<div class="msg_container" align="right">
-			<span class="msg_text" chat_id="23463" position="right" align="left">
-				我是沒差啦~ 可是我可能會帶"朋友"一起回來這樣你ok齁
-			</span>
-		</div>
-		<div class="msg_container" align="left">
-			<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
-			<span class="msg_text" chat_id="23464" position="left" align="left">
-				恩恩沒關西 那禮拜六見囉(灑花~
-			</span>
-		</div>
-		<div class="msg_container" align="right">
-			<span class="msg_text" chat_id="23465" position="right" align="left" style="background-color: #6699FF">
-				好啦先這樣我趕作業掰~
-			</span>
-		</div>
+		
 	</div>
 	<div id="input_msg_container" align="center">
-		<input type="text" id="input_msg" onkeypress="check(event);"></input>
+		<input type="text" placeholder="Please type your msg here and press 'enter' " id="input_msg" onkeypress="check(event);" autofocus></input>
 	</div>
 </div>
 <div id="friend_list" align="center">
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample2.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			涵涵
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample3.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			昀昀
 		</span>
 	</div>
-	<div class="friend_container" style="background-color: #FFFF99">
+	<div class="friend_container" style="background-color: #EBEBFF">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample1.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			彤彤
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample4.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			子瑄
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample5.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			妍姊
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample6.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			欣容
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample7.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			安安
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample8.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			蓁蓁
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
 	<div class="friend_container" onmouseover="light(this);" onmouseout="unlight(this);">
 		<div class="floater"></div>
 		<img class="head" src="{{ url_for('static', filename='sample_x.jpg') }}">
-		<span class="msg_text" align="left">
+		<span class="friend_text" align="left">
 			My dear
 		</span>
 	</div>
     </div>
 </div>
 <script src="{{ url_for('static', filename='chatroom.js') }}"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>
+	$(document).ready(function(){
+		console.log('ready');
+		//window.scrollTo(0,document.body.scrollHeight);
+		//mainpart = document.getElementById('mainpart');
+		//mainpart.scrollTo(0, mainpart.scrollHeight);
+	});
+</script>
 
 {% endblock %}
